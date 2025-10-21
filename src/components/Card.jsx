@@ -2,11 +2,12 @@ import '../styles/Card.css';
 
 export default function Card({
     pokemonName,
-    imageURL
+    imageURL,
+    shufflePokemons,
 }) {
 
     return (
-        <div className="card">
+        <div className="card" onClick={() => shufflePokemons()}>
             <img src={imageURL}/>
             <p>{pokemonName}</p>
         </div>
