@@ -3,4 +3,6 @@
     grid-template-columns: repeat(5, 1fr);
     height: 70vh;
     width: 100vw;
+    justify-items: center;
+    align-items: center;
 }
