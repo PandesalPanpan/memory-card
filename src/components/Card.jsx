@@ -8,7 +8,7 @@ export default function Card({
 
     return (
         <div className="card" onClick={() => shufflePokemons()}>
-            <img src={imageURL}/>
+            <img src={imageURL} draggable={false}/>
             <p>{pokemonName}</p>
         </div>
     )
