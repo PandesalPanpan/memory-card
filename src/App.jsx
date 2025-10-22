@@ -4,7 +4,6 @@ import Game from './components/Game'
 import Scoreboard from './components/Scoreboard'
 
 function App() {
-  // Logic in collecting all clicked pokemons
   const [selectedPokemons, setSelectedPokemons] = useState([]);
   const currentScore = selectedPokemons.length;
   
@@ -17,7 +16,7 @@ function App() {
   }
 
   return (<>
-    <Scoreboard/>
+    <Scoreboard currentScore={currentScore}/>
     <Game selectPokemon={selectPokemon}/>
   </>
   )
