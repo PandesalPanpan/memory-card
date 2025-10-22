@@ -74,3 +74,15 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+#root {
+  height: 100vh;
+}
+
+.scoreboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 35px;
+}
