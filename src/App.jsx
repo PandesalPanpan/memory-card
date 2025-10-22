@@ -1,15 +1,24 @@
 import { useState } from 'react'
 import './App.css'
-import Card from './components/Card'
 import Game from './components/Game'
 import Scoreboard from './components/Scoreboard'
 
 function App() {
-  // TODO: Write the scoring logic here
+  // Logic in collecting all clicked pokemons
+  const [selectedPokemons, setSelectedPokemons] = useState([]);
+  const currentScore = selectedPokemons.length;
+  
+  const selectPokemon = (pokemonName) => {
+    if (selectedPokemons.includes(pokemonName)) {      
+      setSelectedPokemons([]);
+      return;
+    }
+    setSelectedPokemons([...selectedPokemons, pokemonName])
+  }
 
   return (<>
     <Scoreboard/>
-    <Game />
+    <Game selectPokemon={selectPokemon}/>
   </>
   )
 }
